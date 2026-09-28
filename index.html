@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Foreground — Brand character studio</title>
+<meta name="description" content="Front-facing landing pages that give your brand a personality and send customers straight to your checkout. Your main site stays untouched.">
+<meta property="og:title" content="Foreground — Brand character studio">
+<meta property="og:description" content="Front-facing landing pages that give your brand a personality and send customers straight to your checkout.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='15' cy='17' r='12' fill='%231d1d1f'/%3E%3Ccircle cx='25' cy='7' r='5' fill='%232f5bff'/%3E%3C/svg%3E">
+<script>
+(function () {
+  var t = null;
+  try { t = localStorage.getItem('fg-theme'); } catch (e) {}
+  if (t === 'dark' || (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="fg" style="--accent: #2f5bff; width: 100%; box-sizing: border-box; padding-bottom: 32px">
+
+<!-- NAV -->
+<nav class="nav" aria-label="Primary">
+<a href="#top" class="logo"><span class="logo-mark"></span><span>Foreground</span></a>
+<div class="navlinks">
+<a class="navlink" href="#how">How it works</a>
+<a class="navlink" href="#services">Services</a>
+<a class="navlink" href="#process">Process</a>
+<a class="navlink" href="use-cases.html">Use cases</a>
+<a class="navlink" href="#faq">FAQ</a>
+</div>
+<button class="iconbtn" id="themeToggle" type="button" aria-label="Switch to dark mode">
+<span class="ic-sun"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+<span class="ic-moon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"></path></svg></span>
+</button>
+<a class="btn btn-dark" href="#contact">Get a demo</a>
+</nav>
+
+<!-- HERO -->
+<section id="top" class="wrap" style="padding-top: 96px; padding-bottom: 72px">
+<div class="grid-hero" style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 28px; align-items: flex-start">
+<span class="pill rise"><span class="dot"></span>A brand character studio</span>
+<h1 class="h1 rise d1">Give your brand a <span class="serif" style="color: var(--accent); font-size: 1.08em">personality</span> people buy from.</h1>
+<p class="lede rise d2" style="max-width: 520px">We design and run front-facing landing pages that give your company a voice — then send customers straight to your product or checkout page. Your main site stays exactly as it is.</p>
+<div class="rise d3" style="display: flex; gap: 12px; flex-wrap: wrap">
+<a class="btn btn-primary" href="#contact">Get a free demo page <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-ghost" href="#how">See how it works</a>
+</div>
+<div class="rise d4" style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; color: var(--muted)">
+<span style="display: flex; align-items: center; gap: 8px"><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg></span>No changes to your website</span>
+<span style="display: flex; align-items: center; gap: 8px"><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg></span>See it before you pay</span>
+</div>
+</div>
+
+<!-- hero visual: bubble stack -->
+<div class="rise d2" style="position: relative; height: 560px">
+<div class="card float" style="position: absolute; left: 24px; top: 30px; right: 40px; padding: 18px; border-radius: 36px">
+<div style="display: flex; gap: 6px; padding: 4px 6px 16px">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: var(--surface2)"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: var(--surface2)"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: var(--surface2)"></span>
+</div>
+<div style="border-radius: 26px; background: var(--accent); color: #fff; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 12px; letter-spacing: .1em; text-transform: uppercase; opacity: .85">Spring drop</span>
+<div style="font-size: 38px; line-height: 1; font-weight: 600; letter-spacing: -.03em">Oats with <span class="serif">opinions.</span></div>
+<div style="font-size: 14px; opacity: .85; max-width: 240px; line-height: 1.5">Sample page for a fictional brand — this is where your company's character shows up.</div>
+<span style="align-self: flex-start; margin-top: 6px; background: #fff; color: #111; border-radius: 999px; padding: 12px 18px; font-size: 14px; font-weight: 500">Shop the drop →</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 8px 6px">
+<div class="mock-line" style="width: 70%"></div>
+<div class="mock-line" style="width: 45%"></div>
+</div>
+</div>
+<div class="card bubble float2" style="position: absolute; right: 0; top: 370px; padding: 14px 20px 14px 14px; display: flex; align-items: center; gap: 12px">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: var(--soft); color: var(--accent); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"></rect><path d="M3 10h18"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 12px; color: var(--muted)">Sends to</span>
+<span style="font-size: 14px; font-weight: 500">yourstore.com/checkout</span>
+</div>
+</div>
+<div class="card bubble float3" style="position: absolute; left: 0; top: 470px; padding: 12px 18px; display: flex; align-items: center; gap: 10px; font-size: 14px">
+<span class="dot"></span><span>Voice, visuals, and one clear action</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee-box" aria-label="What we shape" style="padding: 8px 0 88px; overflow: hidden">
+<div class="marquee">
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Brand voice</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Landing pages</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Product launches</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Campaign funnels</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Visual character</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Seasonal drops</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Storytelling</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Conversion copy</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Brand voice</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Landing pages</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Product launches</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Campaign funnels</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Visual character</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Seasonal drops</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Storytelling</span>
+<span class="pill" style="font-size: 15px; padding: 12px 20px">Conversion copy</span>
+</div>
+</section>
+
+<!-- HOW IT FITS -->
+<section id="how" class="wrap" style="padding-top: 40px; padding-bottom: 120px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 18px; align-items: center; text-align: center; max-width: 760px; margin: 0 auto 64px">
+<span class="eyebrow">How it fits</span>
+<h2 class="h2">Your marketing arm, <span class="serif">not</span> a rebuild.</h2>
+<p class="lede">We sit in front of your business. Your traffic lands on a page with real character, and every button leads to the checkout or product page you already have.</p>
+</div>
+<div class="funnel reveal" style="display: flex; align-items: center; gap: 16px">
+<div class="card" style="flex: 1 1 0; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="step-num"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11v2a2 2 0 0 0 2 2h1l4 4V5L7 9H6a2 2 0 0 0-2 2z"></path><path d="M16 8a5 5 0 0 1 0 8"></path></svg></span>
+<div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em">Your audience</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.55; font-size: 15px">Ads, socials, email, QR codes — wherever people first meet you.</p>
+</div>
+<div class="track"><span class="runner"></span><span class="runner late"></span></div>
+<div class="card" style="flex: 1.2 1 0; padding: 32px; display: flex; flex-direction: column; gap: 14px; background: var(--text); color: var(--bg); border-color: transparent">
+<span class="step-num" style="background: var(--accent); color: #fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6L20 9.3l-4 4 1 5.7-5-2.8-5 2.8 1-5.7-4-4 5.4-.7z"></path></svg></span>
+<div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em">Your Foreground page</div>
+<p style="margin: 0; opacity: .72; line-height: 1.55; font-size: 15px">A focused page with your voice and visuals, built to earn one click.</p>
+</div>
+<div class="track"><span class="runner"></span><span class="runner late"></span></div>
+<div class="card" style="flex: 1 1 0; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="step-num"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle><path d="M3 4h2l2.4 11h11.2L21 8H7"></path></svg></span>
+<div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em">Your checkout</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.55; font-size: 15px">Your existing product or payment page. Untouched, and now busier.</p>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="wrap" style="padding-bottom: 120px">
+<div class="reveal" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<span class="eyebrow">Services</span>
+<h2 class="h2">Pick a page. <span class="serif">We bring it to life.</span></h2>
+</div>
+<p class="lede" style="max-width: 380px; font-size: 17px">Clear, productized deliverables with a fixed scope — no endless retainers, no guesswork.</p>
+</div>
+<div class="grid-bento" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<div class="card span2 reveal" style="grid-column: span 2; padding: 40px; display: flex; gap: 32px; align-items: center; min-height: 300px">
+<div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 14px">
+<span class="pill" style="align-self: flex-start">Core</span>
+<div style="font-size: 30px; font-weight: 600; letter-spacing: -.03em">Launch Page</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6">One polished landing page for a product, offer or brand story — with a clear call to action wired to your existing checkout.</p>
+</div>
+<div style="flex: 0 0 200px; height: 220px; border-radius: 28px; background: var(--surface2); padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; transition: background-color .6s">
+<div style="height: 90px; border-radius: 18px; background: var(--accent)"></div>
+<div class="mock-line" style="width: 80%; background: var(--line)"></div>
+<div class="mock-line" style="width: 55%; background: var(--line)"></div>
+<div style="margin-top: auto; align-self: flex-start; padding: 8px 14px; border-radius: 999px; background: var(--text); color: var(--bg); font-size: 12px">Buy now</div>
+</div>
+</div>
+<div class="card reveal" style="padding: 36px; display: flex; flex-direction: column; gap: 14px">
+<span class="step-num"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5s1.3 1.8 3.5 1.8 3.5-1.8 3.5-1.8M9 9.5h.01M15 9.5h.01"></path></svg></span>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Character Kit</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6">Voice, tone, palette and visual rules that make every page unmistakably you.</p>
+</div>
+<div class="card reveal" style="padding: 36px; display: flex; flex-direction: column; gap: 14px">
+<span class="step-num"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-2-8z"></path></svg></span>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Campaign Pages</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6">Dedicated pages for each ad, email or social push, so every audience gets a message made for them.</p>
+</div>
+<div class="card reveal" style="padding: 36px; display: flex; flex-direction: column; gap: 14px">
+<span class="step-num"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"></rect><path d="M4 14l4-4 5 5 3-3 4 4"></path></svg></span>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Product Spotlights</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6">Hero pages for a single product, built to sell it before shoppers ever see a cart.</p>
+</div>
+<div class="card reveal" style="padding: 36px; display: flex; flex-direction: column; gap: 14px">
+<span class="step-num"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"></path><path d="M21 3v5h-5"></path></svg></span>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Seasonal Refresh</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6">New drops, holidays and promos — we refresh your pages so they never go stale.</p>
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="padding: 120px 0; background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background-color .6s, border-color .6s">
+<div class="wrap">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 700px; margin-bottom: 56px">
+<span class="eyebrow">Process</span>
+<h2 class="h2">You see it <span class="serif">before</span> you commit.</h2>
+<p class="lede">Every engagement starts with a demo built around your actual brand. Like it? We launch. Don't? You've lost nothing.</p>
+</div>
+<div class="grid-4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<div class="card reveal" style="padding: 32px; display: flex; flex-direction: column; gap: 16px; background: var(--bg)">
+<span class="step-num">01</span>
+<div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em">Discover</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6; font-size: 15px">A short call about your brand, your audience and the page that should sell for you.</p>
+</div>
+<div class="card reveal" style="padding: 32px; display: flex; flex-direction: column; gap: 16px; background: var(--bg)">
+<span class="step-num">02</span>
+<div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em">Demo</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6; font-size: 15px">We build a working demo page with your name, products and personality on it.</p>
+</div>
+<div class="card reveal" style="padding: 32px; display: flex; flex-direction: column; gap: 16px; background: var(--bg)">
+<span class="step-num">03</span>
+<div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em">Launch</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6; font-size: 15px">We polish, connect your checkout or product links, and hand you a link to share.</p>
+</div>
+<div class="card reveal" style="padding: 32px; display: flex; flex-direction: column; gap: 16px; background: var(--bg)">
+<span class="step-num">04</span>
+<div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em">Evolve</div>
+<p style="margin: 0; color: var(--muted); line-height: 1.6; font-size: 15px">New campaigns, new offers, new pages — your marketing arm keeps moving.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- USE CASES -->
+<section id="usecases" class="wrap" style="padding-top: 120px; padding-bottom: 120px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center; max-width: 760px; margin: 0 auto 56px">
+<span class="eyebrow">Use cases</span>
+<h2 class="h2">Made for brands with <span class="serif">something to say.</span></h2>
+<p class="lede">If you sell through a checkout, booking or sign-up page, a front door with more personality can help. Here's where it tends to land.</p>
+<a class="btn btn-ghost" href="use-cases.html">Explore use cases <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="grid-3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch">
+<div class="card uc reveal" data-case="product" data-label="Product brands" style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span class="step-num">01</span>
+<span class="pill" style="font-size: 12px; padding: 6px 12px">Sends to: Product page</span>
+</div>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Product brands</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The problem</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px">Your product page on a big storefront looks like everyone else’s. Nothing says why you.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The page</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px; color: var(--muted)">A launch page that tells the story behind the product, then sends shoppers to buy.</p>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<a class="uc-link" style="margin-top: 0" href="#contact" data-pick="product">This sounds like us <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="uc-more" href="use-cases.html#product">See an example</a>
+</div>
+</div>
+<div class="card uc reveal" data-case="food" data-label="Restaurants &amp; cafés" style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span class="step-num">02</span>
+<span class="pill" style="font-size: 12px; padding: 6px 12px">Sends to: Online ordering</span>
+</div>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Restaurants &amp; cafés</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The problem</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px">A new menu or seasonal special gets buried in a feed and a PDF.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The page</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px; color: var(--muted)">A page that makes the menu feel like an event, with one tap to order or reserve.</p>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<a class="uc-link" style="margin-top: 0" href="#contact" data-pick="food">This sounds like us <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="uc-more" href="use-cases.html#food">See an example</a>
+</div>
+</div>
+<div class="card uc reveal" data-case="fitness" data-label="Fitness &amp; wellness studios" style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span class="step-num">03</span>
+<span class="pill" style="font-size: 12px; padding: 6px 12px">Sends to: Booking page</span>
+</div>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Fitness &amp; wellness studios</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The problem</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px">Class packs and intro offers are hidden behind a generic booking widget.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The page</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px; color: var(--muted)">An offer page with your studio’s energy, straight into your booking system.</p>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<a class="uc-link" style="margin-top: 0" href="#contact" data-pick="fitness">This sounds like us <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="uc-more" href="use-cases.html#fitness">See an example</a>
+</div>
+</div>
+<div class="card uc reveal" data-case="realestate" data-label="Real estate" style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span class="step-num">04</span>
+<span class="pill" style="font-size: 12px; padding: 6px 12px">Sends to: Listing or inquiry</span>
+</div>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Real estate</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The problem</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px">Great properties get flattened into the same listing template.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The page</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px; color: var(--muted)">A spotlight page for a single property or development, built to drive inquiries.</p>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<a class="uc-link" style="margin-top: 0" href="#contact" data-pick="realestate">This sounds like us <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="uc-more" href="use-cases.html#realestate">See an example</a>
+</div>
+</div>
+<div class="card uc reveal" data-case="events" data-label="Events &amp; venues" style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span class="step-num">05</span>
+<span class="pill" style="font-size: 12px; padding: 6px 12px">Sends to: Ticketing</span>
+</div>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Events &amp; venues</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The problem</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px">Ticket platforms sell the seat, not the night.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The page</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px; color: var(--muted)">An event page with atmosphere and a clear path to tickets.</p>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<a class="uc-link" style="margin-top: 0" href="#contact" data-pick="events">This sounds like us <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="uc-more" href="use-cases.html#events">See an example</a>
+</div>
+</div>
+<div class="card uc reveal" data-case="creators" data-label="Coaches &amp; creators" style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span class="step-num">06</span>
+<span class="pill" style="font-size: 12px; padding: 6px 12px">Sends to: Checkout</span>
+</div>
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">Coaches &amp; creators</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The problem</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px">A course or program launch lives on a bare checkout page.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted)">The page</span>
+<p style="margin: 0; line-height: 1.55; font-size: 15px; color: var(--muted)">A launch page in your voice that warms people up before they pay.</p>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<a class="uc-link" style="margin-top: 0" href="#contact" data-pick="creators">This sounds like us <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="uc-more" href="use-cases.html#creators">See an example</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="wrap" style="padding-bottom: 120px">
+<div class="grid-2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 56px; align-items: start">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px">
+<span class="eyebrow">FAQ</span>
+<h2 class="h2">Good <span class="serif">questions.</span></h2>
+<p class="lede" style="font-size: 17px">Anything else? Ask on the call — we'll show you rather than tell you.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="faq open">
+<button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a0">
+<span>Do I need to change my website?</span>
+<span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span>
+</button>
+<p class="faq-a" id="faq-a0">No. Your site stays exactly as it is. We build a separate, front-facing page, and its buttons link straight to the product or payment pages you already have.</p>
+</div>
+<div class="faq">
+<button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1">
+<span>Where do customers actually pay?</span>
+<span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span>
+</button>
+<p class="faq-a" id="faq-a1" hidden>On your existing checkout. Our pages do the storytelling and persuading, then hand shoppers off to your store, so your payments, inventory and orders stay where they are.</p>
+</div>
+<div class="faq">
+<button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2">
+<span>What does &quot;brand character&quot; mean?</span>
+<span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span>
+</button>
+<p class="faq-a" id="faq-a2" hidden>It is the personality people feel when they meet your brand — the way you speak, the visuals you use, and the small details that make you memorable instead of generic.</p>
+</div>
+<div class="faq">
+<button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3">
+<span>How fast can a page go live?</span>
+<span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span>
+</button>
+<p class="faq-a" id="faq-a3" hidden>It depends on the page. A simple, focused page can go live quickly, while pages with more sections, custom visuals or several products take longer. We’ll give you a timeline after the first call, and you’ll see a working demo before anything is final.</p>
+</div>
+<div class="faq">
+<button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4">
+<span>Can I request changes after launch?</span>
+<span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span>
+</button>
+<p class="faq-a" id="faq-a4" hidden>Yes. We keep refining your page after launch, and we can add new pages for new campaigns, offers and seasons.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="wrap" style="padding-bottom: 80px">
+<div class="card reveal" style="border-radius: 48px; padding: 96px 48px; background: var(--accent); color: #fff; border-color: transparent; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; position: relative; overflow: hidden">
+<span class="float" style="position: absolute; width: 220px; height: 220px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); left: -60px; top: -60px"></span>
+<span class="float2" style="position: absolute; width: 140px; height: 140px; border-radius: 50%; background: rgba(255,255,255,.1); right: 60px; bottom: -40px"></span>
+<h2 class="h2" style="max-width: 760px; position: relative">Let's give your brand a <span class="serif">face.</span></h2>
+<div id="signupWrap" style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 24px; width: 100%">
+<p class="lede" style="color: rgba(255,255,255,.88); max-width: 560px; position: relative">Leave your name and email. We'll reach out and build a free demo page around your brand — no strings.</p>
+<form id="signup" class="signup" novalidate style="position: relative; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 680px">
+<label class="sr" for="su-name">Name</label>
+<input id="su-name" class="field" type="text" name="name" autocomplete="name" placeholder="Your name" required>
+<label class="sr" for="su-email">Email</label>
+<input id="su-email" class="field" type="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+<input type="hidden" name="interest" id="su-interest" value="General">
+<input type="hidden" name="_subject" value="New Foreground sign-up">
+<div class="hp" aria-hidden="true"><label for="su-gotcha">Leave this empty</label><input id="su-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+<button class="btn" id="su-btn" type="submit" style="background: #fff; color: #111; min-height: 54px; padding: 0 26px"><span id="su-btn-label">I&#39;m interested</span> <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</form>
+<div class="chip" id="su-chip" hidden style="position: relative">Interested in: <span id="su-chip-label"></span><button class="chip-x" type="button" aria-label="Clear selection" id="su-chip-clear"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
+<p role="alert" id="su-error" hidden style="margin: 0; position: relative; font-size: 15px; font-weight: 500"></p>
+<p style="margin: 0; position: relative; font-size: 13px; color: rgba(255,255,255,.8)">We'll only use this to contact you about your demo.</p>
+</div>
+<div id="signupDone" hidden class="pop" style="position: relative; flex-direction: column; align-items: center; gap: 14px">
+<span style="width: 64px; height: 64px; border-radius: 50%; background: #fff; color: var(--accent); display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg></span>
+<div style="font-size: 26px; font-weight: 600; letter-spacing: -.02em">Thanks, <span id="su-first"></span>. You're on the list.</div>
+<p style="margin: 0; font-size: 17px; color: rgba(255,255,255,.88)">We'll be in touch at <span id="su-mail"></span> soon.</p>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-top: 24px; padding-bottom: 24px; border-top: 1px solid var(--line)">
+<a href="#top" class="logo"><span class="logo-mark"></span><span>Foreground</span></a>
+<div style="display: flex; gap: 24px; flex-wrap: wrap">
+<a class="foot-link" href="#services">Services</a>
+<a class="foot-link" href="use-cases.html">Use cases</a>
+<a class="foot-link" href="#faq">FAQ</a>
+<a class="foot-link" href="#contact">Contact</a>
+</div>
+<span style="font-size: 14px; color: var(--muted)">© <span id="year">2026</span> Foreground Studio</span>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
