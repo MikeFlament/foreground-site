@@ -102,5 +102,26 @@ var FORM_ENDPOINT = "https://formspree.io/f/mkowebrv";
     all('.reveal').forEach(function (el) { io.observe(el); });
   }
 
+  // Hero button: cycle through industries, link to the one showing
+  var rotBtn = $('rotBtn');
+  if (rotBtn) {
+    var words = all('#rotBtn .rot > span'), wi = 0;
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var setHref = function () { rotBtn.setAttribute('href', 'use-cases.html#' + words[wi].getAttribute('data-id')); };
+    setHref();
+    var paused = false;
+    rotBtn.addEventListener('mouseenter', function () { paused = true; });
+    rotBtn.addEventListener('mouseleave', function () { paused = false; });
+    setInterval(function () {
+      if (paused || document.hidden) return;
+      var cur = words[wi];
+      wi = (wi + 1) % words.length;
+      cur.classList.remove('on');
+      if (!reduce) { cur.classList.add('out'); setTimeout(function () { cur.classList.remove('out'); }, 600); }
+      words[wi].classList.add('on');
+      setHref();
+    }, 2200);
+  }
+
   var y = $('year'); if (y) y.textContent = new Date().getFullYear();
 })();

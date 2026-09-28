@@ -167,10 +167,10 @@ html.dark .ic-sun{display:flex}html.dark .ic-moon{display:none}
 .uc-row.flip .uc-copy{order:0}
 .uc-copy .h2{font-size:36px}
 .mock,.flip .mock{transform:none}
-.screen{aspect-ratio:auto;min-height:320px;padding:18px}
-.screen .mhero{grid-template-columns:minmax(0,1fr)}
-.screen .mvis{display:none}
-.screen .mnav span{display:none}
+.mock .screen{aspect-ratio:auto;min-height:320px;padding:18px}
+.mock .screen .mhero{grid-template-columns:minmax(0,1fr)}
+.mock .screen .mvis{display:none !important}
+.mock .screen .mnav span{display:none}
 .sendto,.flip .sendto{right:12px;left:auto}
 }
 @media (prefers-reduced-motion: reduce){
@@ -179,3 +179,33 @@ html.dark .ic-sun{display:flex}html.dark .ic-moon{display:none}
 }
 
 html.dark .eyebrow{color:#8aa0ff}
+
+/* ===== Pull toward use cases ===== */
+/* 1. Nav link highlight */
+.navlink.hot{position:relative;color:var(--text);background:var(--soft);padding-right:26px}
+.navlink.hot::after{content:'';position:absolute;right:12px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--accent);animation:ping 2s ease-out infinite}
+.navlink.hot:hover{background:var(--surface2)}
+@keyframes ping{0%{box-shadow:0 0 0 0 var(--accent)}70%,100%{box-shadow:0 0 0 7px transparent}}
+/* 2. Hero rotating industry button */
+.rot{display:inline-grid;text-align:left;color:var(--accent)}
+.rot > span{grid-area:1/1;opacity:0;translate:0 60%;transition:opacity .45s ease,translate .55s cubic-bezier(.2,.8,.2,1);white-space:nowrap}
+.rot > span.on{opacity:1;translate:0 0}
+.rot > span.out{opacity:0;translate:0 -60%}
+/* 3. Shimmer on the main "explore" button */
+.btn-shine{position:relative;overflow:hidden}
+.btn-shine::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-60%}85%,100%{left:130%}}
+/* 4. Gallery of example pages */
+.gallery{position:relative;overflow:hidden;padding:24px 0 36px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.gallery .marquee{gap:24px;animation-duration:70s}
+.gallery:hover .marquee,.gallery:focus-within .marquee{animation-play-state:paused}
+.mini{display:flex;flex-direction:column;gap:12px;width:360px;flex-shrink:0;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.mini:hover{transform:translateY(-8px)}
+.mini-frame{width:360px;height:256px;border-radius:26px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:8px;box-sizing:border-box;overflow:hidden;transition:box-shadow .6s,background-color .6s,border-color .6s}
+.mini:hover .mini-frame{box-shadow:var(--shadowUp)}
+.mini-frame .scaler{width:516px;transform:scale(.6667);transform-origin:top left}
+.mini-label{display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-size:15px;font-weight:500}
+.mini-label .go{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--accent);opacity:0;translate:-6px 0;transition:opacity .4s,translate .4s cubic-bezier(.2,.8,.2,1)}
+.mini:hover .mini-label .go,.mini:focus-visible .mini-label .go{opacity:1;translate:0 0}
+@media (max-width: 960px){.mini,.mini-frame{width:300px}.mini-frame{height:216px}.mini-frame .scaler{width:516px;transform:scale(.5581)}}
+@media (prefers-reduced-motion: reduce){.gallery .marquee{animation:none !important}.gallery{overflow-x:auto}.btn-shine::after,.navlink.hot::after{animation:none}.rot > span{transition:none}}
