@@ -33,7 +33,7 @@ var FORM_ENDPOINT = "https://formspree.io/f/mkowebrv";
   var form = $('signup');
   if (form) {
     var interest = $('su-interest'), chip = $('su-chip'), chipLabel = $('su-chip-label');
-    var cards = all('.uc');
+    var cards = all('[data-case]');
     var setInterest = function (id) {
       var label = 'General', found = false;
       cards.forEach(function (c) {

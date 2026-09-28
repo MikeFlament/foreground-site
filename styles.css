@@ -241,3 +241,21 @@ html.dark .unlock-err{color:#ff8a80}
 .unlock-x:hover{transform:rotate(90deg)}
 .unlock-fine{font-size:12px !important}
 .toast{position:fixed;left:0;right:0;margin:0 auto;width:max-content;bottom:28px;z-index:100;display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--text);color:var(--bg);font-size:15px;box-shadow:var(--shadowUp);animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+
+/* ===== Two kinds of pages ===== */
+.type-ico{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--soft);color:var(--accent);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.type-card:hover .type-ico{transform:scale(1.1) rotate(-8deg)}
+.type-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.type-step{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);font-size:13px;font-weight:500}
+.type-arrow{display:inline-flex;opacity:.5}
+.type-card:hover .type-arrow{animation:nudge 1.2s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(3px)}}
+.type-chip{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;border:1px solid var(--line);font-size:13px}
+.type-card.picked{box-shadow:0 0 0 2px var(--accent),var(--shadowUp)}
+html.dark .type-card[data-case="collect"]{background:#f5f5f7 !important;color:#1d1d1f !important}
+html.dark .type-card[data-case="collect"] .eyebrow{color:#2f5bff}
+.type-card[data-case="collect"] .eyebrow,.type-card[data-case="collect"] .type-link{color:#8aa0ff}
+.type-card[data-case="collect"] .type-ico{background:rgba(138,160,255,.16);color:#8aa0ff}
+html.dark .type-card[data-case="collect"] .type-link{color:#2f5bff}
+html.dark .type-card[data-case="collect"] .type-ico{background:rgba(47,91,255,.1);color:#2f5bff}
+html.dark .type-card[data-case="collect"] .type-chip,html.dark .type-card[data-case="collect"] .type-step:not([style*="accent"]){background:rgba(0,0,0,.05) !important;border-color:rgba(0,0,0,.1) !important}
