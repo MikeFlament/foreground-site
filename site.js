@@ -193,5 +193,26 @@ var FORM_ENDPOINT = "https://formspree.io/f/mkowebrv";
     });
   });
 
+  // ===== Typewriter tips: type out once when scrolled into view =====
+  var tips = all('.tip');
+  var reduceTips = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function typeTip(el) {
+    var text = el.getAttribute('data-tip'), out = el.querySelector('.tip-text'), i = 0;
+    if (reduceTips) { out.textContent = text; el.classList.add('done'); return; }
+    (function step() {
+      i++; out.textContent = text.slice(0, i);
+      if (i < text.length) setTimeout(step, text.charAt(i - 1) === '.' || text.charAt(i - 1) === ',' ? 220 : 32 + Math.random() * 28);
+      else el.classList.add('done');
+    })();
+  }
+  if (tips.length) {
+    if ('IntersectionObserver' in window) {
+      var tio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { tio.unobserve(en.target); setTimeout(function () { typeTip(en.target); }, 250); } });
+      }, { threshold: 1, rootMargin: '0px 0px -12% 0px' });
+      tips.forEach(function (t) { tio.observe(t); });
+    } else tips.forEach(typeTip);
+  }
+
   var y = $('year'); if (y) y.textContent = new Date().getFullYear();
 })();
