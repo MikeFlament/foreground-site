@@ -259,3 +259,9 @@ html.dark .type-card[data-case="collect"] .eyebrow{color:#2f5bff}
 html.dark .type-card[data-case="collect"] .type-link{color:#2f5bff}
 html.dark .type-card[data-case="collect"] .type-ico{background:rgba(47,91,255,.1);color:#2f5bff}
 html.dark .type-card[data-case="collect"] .type-chip,html.dark .type-card[data-case="collect"] .type-step:not([style*="accent"]){background:rgba(0,0,0,.05) !important;border-color:rgba(0,0,0,.1) !important}
+/* Gate hardening for Safari/WebKit: no 3D tilt while locked, prefixed blur, and a frosted cover as a fallback */
+html:not(.unlocked) .gate .mock,html:not(.unlocked) .gate .mock:hover{transform:none}
+html:not(.unlocked) .gate .mock .screen{-webkit-filter:blur(12px) saturate(1.1)}
+.gate .mock::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:rgba(245,245,247,.55);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);transition:opacity .9s cubic-bezier(.2,.8,.2,1)}
+html.dark .gate .mock::after{background:rgba(21,21,23,.5)}
+html.unlocked .gate .mock::after{opacity:0}
