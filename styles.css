@@ -212,3 +212,32 @@ html.dark .eyebrow{color:#8aa0ff}
 
 /* Phones: hide the home use-cases section (tablets, laptops, monitors keep it) */
 @media (max-width: 767px){.hide-phone{display:none !important}}
+
+/* ===== Example pages gate (blur until email) ===== */
+.gate{position:relative}
+.gate .mock .screen,.gate .mini-frame .scaler{transition:filter .9s cubic-bezier(.2,.8,.2,1)}
+html:not(.unlocked) .gate .mock .screen,html:not(.unlocked) .gate .mini-frame .scaler{filter:blur(12px) saturate(1.1)}
+html:not(.unlocked) .gate .mock .mock-url{filter:blur(4px)}
+.gate-cta{position:absolute;z-index:5;left:50%;top:50%;translate:-50% -50%;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid var(--line);background:var(--glass);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);color:var(--text);font:inherit;font-size:15px;font-weight:500;cursor:pointer;box-shadow:var(--shadowUp);transition:transform .4s cubic-bezier(.2,.8,.2,1),opacity .5s,background-color .6s}
+.gate-cta:hover{transform:scale(1.05)}
+.gate-cta svg{color:var(--accent)}
+.mock-wrap.gate .gate-cta{top:46%}
+html.unlocked .gate-cta{opacity:0;pointer-events:none}
+.gallery.gate .gate-cta{top:42%}
+/* unlock dialog */
+.unlock-dlg{border:0;padding:0;border-radius:36px;max-width:min(460px,calc(100vw - 32px));width:100%;background:var(--surface);color:var(--text);box-shadow:0 40px 100px rgba(0,0,0,.35)}
+.unlock-dlg::backdrop{background:rgba(10,10,12,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.unlock-dlg[open]{animation:pop .5s cubic-bezier(.2,1.2,.3,1) both}
+.unlock-body{padding:40px 36px 32px;display:flex;flex-direction:column;gap:16px;text-align:center;align-items:center}
+.unlock-ico{width:56px;height:56px;border-radius:50%;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center}
+.unlock-body h2{margin:0;font-size:30px;line-height:1.05;letter-spacing:-.03em;font-weight:600}
+.unlock-body p{margin:0;color:var(--muted);line-height:1.5}
+.unlock-form{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:6px}
+.ufield{height:52px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--text);padding:0 20px;font:inherit;font-size:16px;outline:none;box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s}
+.ufield:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--soft)}
+.unlock-err{margin:0;font-size:14px;color:#d93025}
+html.dark .unlock-err{color:#ff8a80}
+.unlock-x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:0;background:var(--surface2);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .3s}
+.unlock-x:hover{transform:rotate(90deg)}
+.unlock-fine{font-size:12px !important}
+.toast{position:fixed;left:0;right:0;margin:0 auto;width:max-content;bottom:28px;z-index:100;display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--text);color:var(--bg);font-size:15px;box-shadow:var(--shadowUp);animation:rise .5s cubic-bezier(.2,.8,.2,1) both}

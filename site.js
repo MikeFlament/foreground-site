@@ -68,6 +68,7 @@ var FORM_ENDPOINT = "https://formspree.io/f/mkowebrv";
         .then(function () {
           $('su-first').textContent = name.split(/\s+/)[0];
           $('su-mail').textContent = email;
+          if (window.fgUnlock) window.fgUnlock();
           $('signupWrap').hidden = true;
           var done = $('signupDone'); done.hidden = false; done.style.display = 'flex';
         })
@@ -122,6 +123,75 @@ var FORM_ENDPOINT = "https://formspree.io/f/mkowebrv";
       setHref();
     }, 2200);
   }
+
+  // ===== Example pages gate: blurred until a visitor leaves name + email =====
+  var UNLOCK_KEY = 'fg-unlocked';
+  function unlock() {
+    root.classList.add('unlocked');
+    try { localStorage.setItem(UNLOCK_KEY, '1'); } catch (e) {}
+  }
+  window.fgUnlock = unlock;
+  var dlg = null, pendingHref = null;
+  function buildDialog() {
+    dlg = document.createElement('dialog');
+    dlg.className = 'unlock-dlg';
+    dlg.setAttribute('aria-labelledby', 'unlockTitle');
+    dlg.innerHTML =
+      '<button class="unlock-x" type="button" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>' +
+      '<div class="unlock-body">' +
+      '<span class="unlock-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="3"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg></span>' +
+      '<h2 id="unlockTitle">See the example pages</h2>' +
+      '<p>Leave your name and email to unlock every example, instantly.</p>' +
+      '<form class="unlock-form" novalidate>' +
+      '<label class="sr" for="ul-name">Name</label><input class="ufield" id="ul-name" name="name" type="text" autocomplete="name" placeholder="Your name">' +
+      '<label class="sr" for="ul-email">Email</label><input class="ufield" id="ul-email" name="email" type="email" autocomplete="email" placeholder="you@company.com">' +
+      '<input type="hidden" name="interest" value="Unlocked example pages">' +
+      '<input type="hidden" name="_subject" value="Example pages unlocked">' +
+      '<div class="hp" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>' +
+      '<p class="unlock-err" role="alert" hidden></p>' +
+      '<button class="btn btn-primary" type="submit" style="min-height:52px">Unlock examples</button>' +
+      '</form>' +
+      '<p class="unlock-fine">We’ll only use this to follow up about your brand.</p>' +
+      '</div>';
+    (document.querySelector('.fg') || document.body).appendChild(dlg);
+    var form = dlg.querySelector('form'), err = dlg.querySelector('.unlock-err'), sbtn = form.querySelector('button[type=submit]');
+    dlg.querySelector('.unlock-x').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    form.addEventListener('input', function () { err.hidden = true; });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.name.value.trim(), email = form.email.value.trim();
+      var fail = function (m, el) { err.textContent = m; err.hidden = false; if (el) el.focus(); };
+      if (!name) return fail('Please add your name.', form.name);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail('Please enter a valid email address.', form.email);
+      sbtn.disabled = true; sbtn.textContent = 'Unlocking…';
+      fetch(FORM_ENDPOINT, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (r) { if (!r.ok) throw new Error('bad'); })
+        .then(function () {
+          unlock(); dlg.close();
+          if (pendingHref) { location.href = pendingHref; return; }
+          var t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status');
+          t.textContent = 'Unlocked. Enjoy the examples.'; (document.querySelector('.fg') || document.body).appendChild(t);
+          setTimeout(function () { t.remove(); }, 3200);
+        })
+        .catch(function () { fail('Something went wrong. Please try again in a moment.'); })
+        .then(function () { sbtn.disabled = false; sbtn.textContent = 'Unlock examples'; });
+    });
+  }
+  function openUnlock(href) {
+    if (!dlg) buildDialog();
+    pendingHref = href || null;
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+    setTimeout(function () { dlg.querySelector('#ul-name').focus(); }, 50);
+  }
+  all('[data-unlock]').forEach(function (b) { b.addEventListener('click', function () { openUnlock(); }); });
+  // Locked gallery cards on the home page ask for email first, then go to that example
+  all('.gate .mini').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (root.classList.contains('unlocked')) return;
+      e.preventDefault(); openUnlock(a.getAttribute('href'));
+    });
+  });
 
   var y = $('year'); if (y) y.textContent = new Date().getFullYear();
 })();
