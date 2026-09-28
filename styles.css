@@ -209,3 +209,6 @@ html.dark .eyebrow{color:#8aa0ff}
 .mini:hover .mini-label .go,.mini:focus-visible .mini-label .go{opacity:1;translate:0 0}
 @media (max-width: 960px){.mini,.mini-frame{width:300px}.mini-frame{height:216px}.mini-frame .scaler{width:516px;transform:scale(.5581)}}
 @media (prefers-reduced-motion: reduce){.gallery .marquee{animation:none !important}.gallery{overflow-x:auto}.btn-shine::after,.navlink.hot::after{animation:none}.rot > span{transition:none}}
+
+/* Phones: hide the home use-cases section (tablets, laptops, monitors keep it) */
+@media (max-width: 767px){.hide-phone{display:none !important}}
